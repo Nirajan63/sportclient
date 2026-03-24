@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded',initReveal);
 
 // ── Counters ──
 function animStats(){
-  [{id:'s1',v:1200},{id:'s2',v:9},{id:'s3',v:7},{id:'s4',v:98}].forEach(t=>{
+  [{id:'s1',v:200},{id:'s2',v:4},{id:'s3',v:3},{id:'s4',v:99}].forEach(t=>{
     const el=document.getElementById(t.id);if(!el)return;
     let c=0;const s=t.v/50;
     const tm=setInterval(()=>{c+=s;if(c>=t.v){c=t.v;clearInterval(tm)}el.textContent=Math.floor(c)},20);
