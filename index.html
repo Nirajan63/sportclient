@@ -706,9 +706,10 @@ document.addEventListener('DOMContentLoaded',initReveal);
 
 // ── Counters ──
 function animStats(){
-  [{id:'s1',v:200},{id:'s2',v:2},{id:'s3',v:4},{id:'s4',v:100}].forEach(t=>{
+  [{id:'s1',v:200,steps:50},{id:'s2',v:2,steps:10},{id:'s3',v:4,steps:10},{id:'s4',v:100,steps:50}].forEach(t=>{
     const el=document.getElementById(t.id);if(!el)return;
-    let c=0;const s=t.v/50;
+    let c=0;
+    const s=t.v/t.steps;
     const tm=setInterval(()=>{c+=s;if(c>=t.v){c=t.v;clearInterval(tm)}el.textContent=Math.floor(c)},20);
   });
 }
